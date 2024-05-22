@@ -3,11 +3,11 @@ import { useStorage } from "@vueuse/core";
 
 useSeoMeta({
   ogTitle: "Bookmarker",
-  ogDescription: "amvstrm`s local bookmaker",
+  ogDescription: "AnimeVerse`s local bookmaker",
   ogImage: "",
   ogUrl: "",
-  twitterTitle: "Bookmarker - amvstrm",
-  twitterDescription: "amvstrm`s local bookmaker",
+  twitterTitle: "Bookmarker - AnimeVerse",
+  twitterDescription: "AnimeVerse`s local bookmaker",
   twitterImage: "",
   twitterCard: "summary",
 });
@@ -244,11 +244,11 @@ const clearData = () => {
             </v-list-item>
           </v-list>
           <v-card-actions>
-            <v-btn
+           <!-- <v-btn
               href="https://docs.amvstr.me/help/bookmark#cloud-integration"
             >
               Help ?
-            </v-btn>
+            </v-btn> -->
             <v-spacer></v-spacer>
             <v-btn @click="checkStatus"> Ok </v-btn>
           </v-card-actions>
