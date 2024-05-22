@@ -17,7 +17,7 @@ const gotoRandomID = async () => {
           <NuxtImg
             src="/logo.png"
             style="display: flex;"
-            alt="amvstrm"
+            alt="AnimeVerse"
             quality="80"
             width="140px"
           />
@@ -49,11 +49,11 @@ const gotoRandomID = async () => {
       <v-divider />
       <v-list>
         <v-list-subheader>More</v-list-subheader>
-        <v-list-item title="About us" to="/about" />
+     <!--   <v-list-item title="About us" to="/about" />
         <v-list-item title="Privacy Policy" to="/privacy" />
         <v-list-item title="DMCA" href="/dmca">
           <template #append>
-            <v-icon icon="mdi-information" />
+            <v-icon icon="mdi-information" /> 
           </template>
         </v-list-item>
         <v-list-item title="Help" href="https://amvdocs.pages.dev/help">
@@ -65,7 +65,7 @@ const gotoRandomID = async () => {
           <template #append>
             <v-icon icon="mdi-github" />
           </template>
-        </v-list-item>
+        </v-list-item> -->
       </v-list>
     </v-navigation-drawer>
 
