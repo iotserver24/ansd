@@ -266,19 +266,19 @@ const clearData = () => {
             <v-btn v-bind="props" icon="mdi-chevron-down-box" variant="text" />
           </template>
           <v-list>
-            <v-list-item
+          <!--  <v-list-item
               title="Save All (Cloud)"
               :disabled="!cfg.enabled"
               @click="saveAlltoDB"
-            />
+            /> -->
             <v-list-item title="Import" @click="importData" />
             <v-list-item title="Export" @click="exportData" />
             <v-list-item title="Clear All" @click="clear_dia = true" />
-            <v-list-item title="Configure Cloud" @click="cfg_dialog = true" />
-            <v-list-item
+            <!--<v-list-item title="Configure Cloud" @click="cfg_dialog = true" /> -->
+          <!--  <v-list-item
               title="Help"
               href="https://docs.amvstr.me/help/bookmark"
-            />
+            /> -->
           </v-list>
         </v-menu>
       </v-col>
