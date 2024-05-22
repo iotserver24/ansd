@@ -116,14 +116,6 @@ const stringInstring = '""';
     <v-progress-circular :size="45" indeterminate />
   </div>
   <div v-else>
-    <v-breadcrumbs>
-      <template #prepend>
-        <v-icon size="small" icon="mdi-home"></v-icon>
-      </template>
-      <v-breadcrumbs-item title="Home" to="/pwa" />
-      <v-breadcrumbs-divider />
-      <v-breadcrumbs-item :title="useRoute().params.id" />
-    </v-breadcrumbs>
     <v-card>
       <v-img
         v-if="anime?.bannerImage !== null"
@@ -266,10 +258,7 @@ const stringInstring = '""';
                               v-model="selectedProvider"
                               clearable
                               label="Select streaming provider"
-                              :items="[
-                                'Gogoanime',
-                                'Gogoanime (DUB)',
-                              ]"
+                              :items="['Gogoanime', 'Gogoanime (DUB)']"
                               variant="solo"
                             ></v-select>
                             <v-list
@@ -298,7 +287,7 @@ const stringInstring = '""';
                                 v-for="(ep, i) in epAni.episodes"
                                 v-else
                                 :key="i"
-                                :to="`/pwa/watch/${useRoute().params.id}-${ep.id}`"
+                                :to="`/watch/${useRoute().params.id}-${ep.id}`"
                                 title="Episode"
                                 :subtitle="ep.id.split('-episode-')[1]"
                               />
@@ -329,7 +318,7 @@ const stringInstring = '""';
                                 v-for="(ep, i) in epAniDub.episodes"
                                 v-else
                                 :key="i"
-                                :to="`/pwa/watch/${useRoute().params.id}-${ep.id}`"
+                                :to="`/watch/${useRoute().params.id}-${ep.id}`"
                                 title="Episode"
                                 :subtitle="ep.id.split('-episode-')[1]"
                               />
