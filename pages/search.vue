@@ -7,17 +7,6 @@ const searchResults = ref();
 const search = ref();
 const searchLoading = ref(true);
 
-useSeoMeta({
-  ogTitle: "Search Anime",
-  ogDescription: "Search 100+ of animes to watch on AnimeVerse",
-  ogImage: "logo.png",
-  ogUrl: "[og:url]",
-  twitterTitle: "Search Anime",
-  twitterDescription: "Search 100+ of animes to watch on AnimeVerse",
-  twitterImage: "logo.png",
-  twitterCard: "summary",
-});
-
 useHead({
   htmlAttrs: {
     lang: "en",
@@ -252,16 +241,28 @@ const query = useRoute().query;
 
 if (query.q || query.genres || query.tags) {
   search.value = query?.q;
-  selectGenres.value = query?.genres && query?.genres.includes(',') ? query?.genres.split(',') : query?.genres;
-  selectTags.value = query?.tags && query?.tags.includes(',') ? query?.tags.split(',') : query?.tags;
+  selectGenres.value =
+    query?.genres && query?.genres.includes(",")
+      ? query?.genres.split(",")
+      : query?.genres;
+  selectTags.value =
+    query?.tags && query?.tags.includes(",")
+      ? query?.tags.split(",")
+      : query?.tags;
   debouncedSearch();
 }
 </script>
 <template>
+  <v-breadcrumbs>
+    <template #prepend>
+      <v-icon size="small" icon="mdi-home"></v-icon>
+    </template>
+    <v-breadcrumbs-item title="Home" to="/pwa" />
+    <v-breadcrumbs-divider />
+    <v-breadcrumbs-item title="Search" />
+  </v-breadcrumbs>
   <v-container>
-    <h1 class="mb-2">
-      Search Anime
-    </h1>
+    <h1 class="mb-2">Search Anime</h1>
     <v-text-field
       v-model="search"
       variant="solo"
@@ -275,7 +276,7 @@ if (query.q || query.genres || query.tags) {
       @update:model-value="debouncedSearch()"
     />
     <v-row class="my-1">
-      <v-col style="padding-bottom: 0;" cols="12" sm="6">
+      <v-col style="padding-bottom: 0" cols="12" sm="6">
         <v-combobox
           v-model="selectGenres"
           :items="genreItems"
@@ -285,7 +286,7 @@ if (query.q || query.genres || query.tags) {
           @update:model-value="debouncedSearch()"
         ></v-combobox>
       </v-col>
-      <v-col style="padding-bottom: 0;" cols="12" sm="6">
+      <v-col style="padding-bottom: 0" cols="12" sm="6">
         <v-combobox
           v-model="selectTags"
           :items="tagItems"
