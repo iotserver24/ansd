@@ -1,11 +1,11 @@
 <script setup>
 useSeoMeta({
   ogTitle: 'Privacy Policy',
-  ogDescription: 'Privacy policy for amvstrm',
+  ogDescription: 'Privacy policy for AnimeVerse',
   ogImage: 'logo.png',
   ogUrl: '[og:url]',
   twitterTitle: 'Home',
-  twitterDescription: 'Privacy policy for amvstrm',
+  twitterDescription: 'Privacy policy for AnimeVerse',
   twitterImage: 'logo.png',
   twitterCard: 'summary'
 })
@@ -68,7 +68,7 @@ useHead({
           <p>
             <strong>Company</strong> (referred to as either &quot;the
             Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in
-            this Agreement) refers to amvstrm.
+            this Agreement) refers to AnimeVerse.
           </p>
         </li>
         <li>
@@ -116,7 +116,7 @@ useHead({
         </li>
         <li>
           <p>
-            <strong>Website</strong> refers to amvstrm, accessible from
+            <strong>Website</strong> refers to AnimeVerse, accessible from
             <a
               href="https://amvstr.ml"
               rel="external nofollow noopener"
